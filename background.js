@@ -1,14 +1,14 @@
 chrome.commands.onCommand.addListener((command) => {
   if (command === "switch-environment") {
     switchEnvironment();
-    alert('command found');
+    console.log('command found');
   } else {
-    alert('command not found');
+    console.log('command not found');
   }
 });
 
 async function switchEnvironment() {
-  alert('switchEnvironment');
+  console.log('switchEnvironment');
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab) return;
 
