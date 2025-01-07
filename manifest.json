@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "FinalForms URL Switcher",
+  "version": "1.0",
+  "description": "Switch between development and production URLs",
+  "permissions": ["activeTab", "tabs", "storage"],
+  "commands": {
+    "switch-environment": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Switch between environments"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

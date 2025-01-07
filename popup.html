@@ -1,0 +1,61 @@
+<style>
+  body {
+    width: 300px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+  }
+  .environment-button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f8f9fa;
+  }
+  .environment-button:hover {
+    background: #e9ecef;
+  }
+  .environment-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+  .shortcut-info {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  .error-message {
+    color: #dc3545;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: #f8d7da;
+    display: none;
+  }
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FinalForms URL Switcher</title>
+    <meta charset='UTF-8' />
+  </head>
+
+  <body>
+    <div id="environmentButtons"></div>
+    <div class="shortcut-info">
+      Keyboard shortcut: <span id="shortcutKey"></span>
+    </div>
+    <div id="errorMessage" class="error-message"></div>
+  </body>
+</html>
+
+<script src="popup.js"></script>
